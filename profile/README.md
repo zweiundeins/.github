@@ -1,84 +1,36 @@
 # zwei und eins gmbh
 
-![Swiss Made](https://img.shields.io/badge/Made%20in-Switzerland-red)
-![Focus](https://img.shields.io/badge/Focus-Server--centric%20Software-blue)
-![Philosophy](https://img.shields.io/badge/Philosophy-Reduce%20Complexity-success)
-![Status](https://img.shields.io/badge/Open%20Source-Selective-lightgrey)
+Simpler software, ready for AI agents. We cut the cost of over-engineered web stacks and make applications usable by AI agents: one process on one server, one SQLite file, HTML over the wire, and an MCP server in front of your API.
 
-Welcome to the **zwei und eins** GitHub organization — the home for open-source work and shared tooling from *zwei und eins gmbh*, a Swiss software consultancy and development studio.
+A Swiss company in Aarberg, led by [Michael Bolli](https://github.com/mbolli), who has built and looked after web applications for over 20 years.
 
-We believe in **pragmatic, maintainable, and performant software** that solves real problems — without unnecessary abstraction or architectural overhead.
+## What we do
 
-## About
+- **Architecture audit**: one to two weeks of code review, a workshop and written findings on where your cost and complexity come from, and what to cut first.
+- **Simplify & migrate**: off microservices, serverless or a hyperscaler, step by step, without a big-bang rewrite.
+- **Make your app LLM-ready**: an MCP server, an OpenAPI spec, a typed SDK and a permission model your security team can sign off.
+- **Agentic development**: we build with your team using coding agents, and show them how to keep quality under control.
 
-*zwei und eins gmbh* is led by Michael Bolli, a software engineer with long-term experience in building, stabilising, and evolving production systems.
+Not our focus: marketing-only websites, and frontend projects without backend or architectural responsibility.
 
-We work with companies and internal IT teams that:
-- operate business-critical software,
-- struggle with growing architectural complexity,
-- or want to move towards simpler, more robust system designs.
+## Open source
 
-Our focus is not novelty for its own sake, but **clarity, longevity, and measurable improvements**.
+- **[starbase](https://github.com/zweiundeins/starbase)**: gallery of Datastar web components. Go, templ, SQLite, CQRS: the stack we recommend, end to end.
+- **[kanban](https://github.com/zweiundeins/kanban)**: collaborative Kanban board, one Go binary, SQLite, Datastar. Measured against PLANKA, with every script and all raw data.
+- **[cashctrl-mcp](https://github.com/zweiundeins/cashctrl-mcp)**: MCP server for the Swiss accounting system CashCtrl. 376 endpoints, read-only unless write mode is on, every write previewed.
+- **[cashctrl-ts-sdk](https://github.com/zweiundeins/cashctrl-ts-sdk)**: typed TypeScript client for all 376 endpoints of the CashCtrl API, with an OpenAPI 3.1 spec.
+- **[payrexx-go-sdk](https://github.com/zweiundeins/payrexx-go-sdk)** and **[wallee-go-sdk](https://github.com/zweiundeins/wallee-go-sdk)**: Go SDKs for the Swiss payment providers Payrexx and Wallee.
 
+Michael’s own projects include [php-via](https://github.com/mbolli/php-via), a real-time engine for PHP, and [nfsen-ng](https://github.com/mbolli/nfsen-ng), a NetFlow visualiser.
+
+## How we build
+
+- Go and PHP on the server, long-running PHP on OpenSwoole
+- SQLite, or MySQL where it is already in place
+- HTML over SSE with Datastar, minimal client-side state
+- Every number in our [blog posts](https://zweiundeins.gmbh/en/blog) comes with the source and the raw data
 
 ## Contact
 
-- **Website:** https://zweiundeins.gmbh  
-- **Email:** info@zweiundeins.gmbh  
-- **Founder:** https://github.com/mbolli  
-- **GitHub Organization:** https://github.com/zweiundeins  
-
-If you value clarity over complexity, we will likely get along well.
-
-## What We Do
-
-### Software & Web Engineering
-- Architecture reviews of existing PHP applications
-- Performance analysis and runtime profiling
-- Refactoring legacy systems with minimal disruption
-- Server-authoritative, HTML- and event-driven architectures
-- Reduction of unnecessary API and SPA complexity
-
-### Consulting & Enablement
-- Temporary reinforcement of engineering teams
-- Architectural decision support
-- Coaching on maintainability, performance, and system design
-
-**Not our focus**
-- Marketing-only websites  
-- Pure frontend projects without backend or architectural responsibility
-
-## Technology & Principles
-
-Our technology choices follow the problem, but are guided by a clear set of principles:
-
-**Languages & Platforms**
-- PHP (primary)
-- TypeScript
-- Python
-
-**Persistence**
-- MySQL
-- SQLite
-
-**Architectural Themes**
-- Server-centric systems
-- Hypermedia-driven flows
-- Server-Sent Events (SSE)
-- Deterministic rendering
-- Minimal client-side state
-
-**Core Values**
-- Fewer moving parts
-- Predictable behaviour
-- Long-term maintainability
-- Performance that can be measured and explained
-
-## Open Source Philosophy
-
-We publish selected internal tools, libraries, and experiments when they are:
-- generally useful,
-- well-understood in production,
-- and aligned with our architectural values.
-
-Open source is a means of **knowledge sharing**, not marketing.
+- **Website:** [zweiundeins.gmbh](https://zweiundeins.gmbh)
+- **Email:** info@zweiundeins.gmbh
