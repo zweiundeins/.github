@@ -15,17 +15,18 @@ Not our focus: marketing-only websites, and frontend projects without backend or
 
 ## Open source
 
-- **[starbase](https://github.com/zweiundeins/starbase)**: gallery of Datastar web components. Go, templ, SQLite, CQRS: the stack we recommend, end to end.
-- **[kanban](https://github.com/zweiundeins/kanban)**: collaborative Kanban board, one Go binary, SQLite, Datastar. Measured against PLANKA, with every script and all raw data.
+- **[lith](https://github.com/zweiundeins/lith)**: the runtime for our Go, SQLite and Datastar apps. One writer applies every write in order, each changed view renders once per tick for everyone who has it open, and goes out compressed over SSE. [zweiundeins.gmbh](https://zweiundeins.gmbh), starbase and kanban run on it. [Docs](https://lith.zweiundeins.gmbh/docs).
+- **[starbase](https://github.com/zweiundeins/starbase)**: gallery of Datastar web components. Go, templ, SQLite, CQRS on lith: the stack we recommend, end to end.
+- **[kanban](https://github.com/zweiundeins/kanban)**: collaborative Kanban board, one Go binary on lith, SQLite, Datastar. Measured against PLANKA, with every script and all raw data.
 - **[cashctrl-mcp](https://github.com/zweiundeins/cashctrl-mcp)**: MCP server for the Swiss accounting system CashCtrl. 376 endpoints, read-only unless write mode is on, every write previewed.
 - **[cashctrl-ts-sdk](https://github.com/zweiundeins/cashctrl-ts-sdk)**: typed TypeScript client for all 376 endpoints of the CashCtrl API, with an OpenAPI 3.1 spec.
 - **[payrexx-go-sdk](https://github.com/zweiundeins/payrexx-go-sdk)** and **[wallee-go-sdk](https://github.com/zweiundeins/wallee-go-sdk)**: Go SDKs for the Swiss payment providers Payrexx and Wallee.
 
-Michael’s own projects include [php-via](https://github.com/mbolli/php-via), a real-time engine for PHP, and [nfsen-ng](https://github.com/mbolli/nfsen-ng), a NetFlow visualiser.
+Michael’s own projects include [php-via](https://github.com/mbolli/php-via), a real-time engine for PHP; [nfsen-ng](https://github.com/mbolli/nfsen-ng), a NetFlow visualiser; [php-ron](https://github.com/mbolli/php-ron), RON for PHP; and the Datastar plugins [data-on-keys](https://github.com/mbolli/datastar-attribute-on-keys) and [data-prop](https://github.com/mbolli/datastar-attribute-prop).
 
 ## How we build
 
-- Go and PHP on the server, long-running PHP on OpenSwoole
+- Go on the server, on lith; PHP where it is already in place, long-running on OpenSwoole with php-via
 - SQLite, or MySQL where it is already in place
 - HTML over SSE with Datastar, minimal client-side state
 - Every number in our [blog posts](https://zweiundeins.gmbh/en/blog) comes with the source and the raw data
